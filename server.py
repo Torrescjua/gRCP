@@ -7,7 +7,7 @@ import calculation_pb2_grpc
 class CalculationServiceServicer(calculation_pb2_grpc.CalculationServiceServicer):
     def PerformTotalCalculation(self, request, context):
         # Crear canales para conectar con los servidores de operación
-        with grpc.insecure_channel('localhost:50052') as channel1, grpc.insecure_channel('localhost:50053') as channel2:
+        with grpc.insecure_channel('10.43.100.156:50052') as channel1, grpc.insecure_channel('10.43.101.52:50053') as channel2:
             # Crear stubs para los servidores de operación
             stub1 = calculation_pb2_grpc.OperationServiceStub(channel1)
             stub2 = calculation_pb2_grpc.OperationServiceStub(channel2)
