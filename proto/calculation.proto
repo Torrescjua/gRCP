@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+service CalculationService {
+  // Método para el cliente que inicia la solicitud de cálculo
+  rpc PerformTotalCalculation (CalculationRequest) returns (CalculationResponse);
+}
+
+service OperationService {
+  // Métodos para cada servidor de operación que hacen cálculos parciales
+  rpc PerformPartialCalculation (PartialCalculationRequest) returns (PartialCalculationResponse);
+}
+
+// Solicitud inicial del cliente
+message CalculationRequest {
+  double operand1 = 1;
+  double operand2 = 2;
+}
+
+// Respuesta final que el servidor de cálculo envía al cliente
+message CalculationResponse {
+  double result = 1;
+}
+
+// Solicitud de cálculo parcial que el servidor de cálculo envía a los servidores de operación
+message PartialCalculationRequest {
+  double value = 1;
+}
+
+// Respuesta parcial que un servidor de operación devuelve al servidor de cálculo
+message PartialCalculationResponse {
+  double partial_result = 1;
+}
