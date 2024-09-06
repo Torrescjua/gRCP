@@ -4,7 +4,7 @@ import calculation_pb2_grpc
 
 def run():
     # Conectarse al servidor de cálculo que está escuchando en el puerto 50051
-    with grpc.insecure_channel('localhost:50051') as channel:
+    with grpc.insecure_channel('10.43.101.185:50051') as channel:
         # Crear un stub para el servicio CalculationService
         stub = calculation_pb2_grpc.CalculationServiceStub(channel)
         

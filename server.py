@@ -33,7 +33,7 @@ def serve():
     calculation_pb2_grpc.add_CalculationServiceServicer_to_server(CalculationServiceServicer(), server)
     
     # Hacer que el servidor escuche en el puerto 50051
-    server.add_insecure_port('[::]:50051')
+    server.add_insecure_port('10.43.101.185:50051')
     server.start()
     print("Servidor de cálculo escuchando en el puerto 50051...")
     
