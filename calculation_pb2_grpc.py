@@ -45,8 +45,7 @@ class CalculationServiceServicer(object):
     """Missing associated documentation comment in .proto file."""
 
     def PerformTotalCalculation(self, request, context):
-        """Método para el cliente que inicia la solicitud de cálculo
-        """
+        """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -118,8 +117,7 @@ class OperationServiceServicer(object):
     """Missing associated documentation comment in .proto file."""
 
     def PerformPartialCalculation(self, request, context):
-        """Métodos para cada servidor de operación que hacen cálculos parciales
-        """
+        """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
